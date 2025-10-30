@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anika|Web Developer</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: white;
+        }
+        
+        header {
+            background-color: rgb(236, 198, 129);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary);
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-img {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .about-img img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .project {
+            margin-bottom: 3rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .project-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .project:hover .project-img img {
+            transform: scale(1.05);
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tag {
+            background-color: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .education {
+            margin-top: 2rem;
+        }
+        
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .education-item h3 {
+            color: var(--secondary);
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-links a {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-links a:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero {
+                padding-top: 6rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Anika Goel</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#project">Project</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Hi, I'm Anika Goel</h1>
+        <p>A last-year computer science student passionate about web development. Currently learning frontend, python and AI/ML to build beautiful and functional websites.</p>
+        <a href="#project" class="btn">View My Project</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a motivated student currently exploring the fundamentals of web development and AI and ML. I enjoy creating clean, responsive interfaces and solving problems through code.</p>
+                <p>When I'm not coding, you can find me reading, watching tech videos or exploring new web technologies.</p>
+                <p> I love learning new things and getting better with time.</p>
+                <div class="skills">
+                    <h3 style="margin-top: 1.5rem;">Skills:</h3>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Responsive Design</li>
+                        <li>Python</li>
+                        <li>DSA with Python</li>
+                        <li>DBMS</li>
+                    </ul>
+                    <h3 style="margin-top: 1.5rem;"> Soft Skills:</h3>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Communication</li>
+                        <li>Fast learner</li>
+                        <li>Problem Solving</li>
+                        <li>Teamwork</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-img">
+                <img src="picc.jpg" alt="Anika, a young woman smiling">
+            </div>
+        </div>
+    </section>
+
+    <section id="project">
+        <h2>My Project</h2>
+        <div class="project">
+            <div class="project-img">
+                <img src="ss.png" alt="Anika's web development project screenshot showing a clean interface">
+            </div>
+            <div class="project-info">
+                <h3>Personal Portfolio Website</h3>
+                <p>A responsive portfolio website built with HTML and CSS to showcase my skills and projects.</p>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Responsive Design</span>
+                </div>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education">
+            <div class="education-item">
+                <h3>Bachelor of Computer Science</h3>
+                <p>Graphic Era University,Dehradun | 2023 - Present</p>
+                <p>Currently in my last year, focusing on web development with focus on python with AI and ML .</p>
+            </div>
+            <div class="education-item">
+                <h3>Senior Secondary Education</h3>
+                <p>Holy Angels Convent School | 2020 - 2022</p>
+                <p>Completed my 11th and 12th with above 85%</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p>I'm always interested in connecting with fellow developers and learning about new opportunities.</p>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/anikag1917040218" target="_blank">LinkedIn</a>
+            <a href="mailto:anikag0404@gmail.com">Email Me</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;Anika. All rights reserved.</p>
+    </footer>
+</body>
+</html>
