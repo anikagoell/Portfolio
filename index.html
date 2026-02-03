@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,11 +23,11 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark);
-            background-color: white;
+            background-color: rgb(226, 228, 233);
         }
         
         header {
-            background-color: rgb(236, 198, 129);
+            background-color: rgb(65, 64, 92);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
@@ -45,19 +44,21 @@
         }
         
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--secondary);
+            font-size: 1.9rem;
+            font-weight: 900;
+            color:white;
+
         }
         
         .nav-links {
+            
             display: flex;
             gap: 1.5rem;
         }
         
         .nav-links a {
             text-decoration: none;
-            color: var(--secondary);
+            color:whitesmoke;
             font-weight: 500;
             transition: color 0.3s;
         }
@@ -146,7 +147,7 @@
         
         .project {
             margin-bottom: 3rem;
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             overflow: hidden;
@@ -260,15 +261,15 @@
 
     <section class="hero" id="home">
         <h1>Hi, I'm Anika Goel</h1>
-        <p>A last-year computer science student passionate about web development. Currently learning frontend, python and AI/ML to build beautiful and functional websites.</p>
-        <a href="#project" class="btn">View My Project</a>
+        <p>A computer science major who is passionate about web development and AI/ML. Currently learning frontend, python, OOPs, weka, pandas to build beautiful and functional websites while also learing to manipulate and assist data to extract meaningful insights which can be used for one's gain.</p>
+        <a href="#project" class="btn">View my Projects</a>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>I'm a motivated student currently exploring the fundamentals of web development and AI and ML. I enjoy creating clean, responsive interfaces and solving problems through code.</p>
+                <p>I'm a motivated student currently exploring the fundamentals of web development and AI and ML. I enjoy creating clean, responsive interfaces and solving real-life problems through code.</p>
                 <p>When I'm not coding, you can find me reading, watching tech videos or exploring new web technologies.</p>
                 <p> I love learning new things and getting better with time.</p>
                 <div class="skills">
@@ -291,7 +292,7 @@
                 </div>
             </div>
             <div class="about-img">
-                <img src="picc.jpg" alt="Anika, a young woman smiling">
+                <img src="picc.jpeg" alt="Anika, a young woman smiling">
             </div>
         </div>
     </section>
@@ -313,6 +314,22 @@
                 <a href="#" class="btn">View Project</a>
             </div>
         </div>
+        <div class="project">
+    <div class="project-img">
+        <img src="ids.png" alt="Intrusion Detection System dashboard showing threat classification results">
+    </div>
+    <div class="project-info">
+        <h3>Intrusion Detection System (ML)</h3>
+        <p>A machine learning-based network threat detection system that analyzes traffic and classifies connections as normal or attack using the NSL-KDD dataset, with a Streamlit web interface for real-time visualization.</p>
+        <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">Streamlit</span>
+        </div>
+        <a href="https://github.com/anikagoell/Intrusion-Detection-System.git" class="btn">View Project</a>
+    </div>
+</div>
     </section>
 
     <section id="education">
@@ -320,13 +337,18 @@
         <div class="education">
             <div class="education-item">
                 <h3>Bachelor of Computer Science</h3>
-                <p>Graphic Era University,Dehradun | 2023 - Present</p>
+                <p>Graphic Era University,Dehradun | 2023 - 2026</p>
                 <p>Currently in my last year, focusing on web development with focus on python with AI and ML .</p>
             </div>
             <div class="education-item">
                 <h3>Senior Secondary Education</h3>
-                <p>Holy Angels Convent School | 2020 - 2022</p>
-                <p>Completed my 11th and 12th with above 85%</p>
+                <p>Holy Angels Convent School | 2021 - 2022</p>
+                <p>Completed my 12th with above 90%</p>
+            </div>
+            <div class="education-item">
+                <h3>Secondary Education</h3>
+                <p>Holy Angels Convent School | 2019 - 2020</p>
+                <p>Completed 10th with above 85%</p>
             </div>
         </div>
     </section>
@@ -337,6 +359,7 @@
         <div class="contact-links">
             <a href="https://www.linkedin.com/in/anikag1917040218" target="_blank">LinkedIn</a>
             <a href="mailto:anikag0404@gmail.com">Email Me</a>
+            <a href="https://github.com/anikagoell">GitHub</a>
         </div>
     </section>
 
